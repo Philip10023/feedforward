@@ -34,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'foundation-rails'
 gem 'devise'
+gem 'pg_search'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'pry-rails'
