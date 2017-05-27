@@ -1,0 +1,17 @@
+<h1 class="feedforward-title">FeedForward! Where your shitty opinion has value.</h1>
+
+
+<div class="feed_list_header">
+  <h2>Article Feed</h2>
+  <div class="feed-list small-9 columns small-centered large-10">
+    <% @feeds.each do |feed| %>
+      <%if user_signed_in? && current_user.admin? %>
+        <span class='animated slideInLeft game-box'>
+        <div><%= link_to "delete", game, method: :delete, data: { confirm: "You sure?" } %></div> </span>
+       <%else%>
+        <p class='animated slideInLeft game-box'>
+        </p>
+       <%end%>
+    <% end %>
+  </div>
+</div>
