@@ -9,5 +9,14 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
-*/
-@import "bootstrap";
+
+ *= require_tree .
+ *= require_self
+ //= require tether
+ *= require _bootstrap-custom
+ *= require ./reviews.scss
+ *= require ./body.scss
+
+ */
+$grid-float-breakpoint: 10px;
+@import 'bootstrap-custom';

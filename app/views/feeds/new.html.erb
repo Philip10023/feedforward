@@ -1,0 +1,29 @@
+<h1>New Feed Form</h1>
+<%= form_for [@feed] do |f| %>
+  <% if @feed.errors.present? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@feed.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+      <% @feed.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='field'>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div class='field'>
+    <%= f.submit value="Add this feed fam" %>
+  </div>
+
+<% end %>
