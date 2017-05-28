@@ -1,16 +1,22 @@
-<h1 class="feedforward-title">FeedForward! Where your shitty opinion has value.</h1>
+<h1 class="feedforward-title col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
 
 <div class="feed_list_header">
-  <h2>Article Feed</h2>
-  <div class="feed-list small-9 columns small-centered large-10">
+  <div class="article_name_one col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-left">Article Feed</div>
+  <div class="article_name_two col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-right">Article Feed</div>
+  <div class="feed-list col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">
     <% @feeds.each do |feed| %>
       <%if user_signed_in? && current_user.admin? %>
         <span class='animated slideInLeft game-box'>
-        <div><%= link_to "delete", game, method: :delete, data: { confirm: "You sure?" } %></div> </span>
+        <div><%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
        <%else%>
         <p class='animated slideInLeft game-box'>
+          <div>
+            <%= feed.description %>
+          </div>
+          <%= link_to "Website", feed.url%>
         </p>
+
        <%end%>
     <% end %>
   </div>

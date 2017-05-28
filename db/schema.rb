@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170527144221) do
+ActiveRecord::Schema.define(version: 20170528202559) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,28 @@ ActiveRecord::Schema.define(version: 20170527144221) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_feeds_on_user_id", using: :btree
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string   "message",                null: false
+    t.integer  "feed_id",                null: false
+    t.integer  "user_id",                null: false
+    t.integer  "updowns_id", default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.index ["feed_id"], name: "index_reviews_on_feed_id", using: :btree
+    t.index ["updowns_id"], name: "index_reviews_on_updowns_id", using: :btree
+    t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
+  end
+
+  create_table "updowns", force: :cascade do |t|
+    t.integer  "user_id",    null: false
+    t.integer  "review_id",  null: false
+    t.boolean  "vote"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["review_id"], name: "index_updowns_on_review_id", using: :btree
+    t.index ["user_id"], name: "index_updowns_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
