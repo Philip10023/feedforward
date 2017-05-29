@@ -39,6 +39,7 @@ gem 'devise'
 gem 'pg_search'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'animate.css-rails', '~> 3.2'
+gem 'youtube_id'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'

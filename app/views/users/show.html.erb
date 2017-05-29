@@ -17,8 +17,7 @@
   <div>
     <% if current_user.admin? === true %>
       <span><%= link_to 'Users', users_path %> | </span>
-      <span><%= link_to 'Reviews', reviews_path %> | </span>
-      <span><%= link_to 'Feeds', games_path %></span>
+      <span><%= link_to 'Feeds', feeds_path %></span>
     <%else%>
   <div>
     <% @user.reviews.each do |review| %>

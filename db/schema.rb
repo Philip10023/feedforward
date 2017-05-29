@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170528202559) do
   create_table "feeds", force: :cascade do |t|
     t.string   "description", default: "", null: false
     t.string   "url",                      null: false
-    t.integer  "user_id",                  null: false
+    t.integer  "user_id"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.index ["user_id"], name: "index_feeds_on_user_id", using: :btree

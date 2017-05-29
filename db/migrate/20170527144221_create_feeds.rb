@@ -3,7 +3,7 @@ class CreateFeeds < ActiveRecord::Migration[5.0]
     create_table :feeds do |t|
       t.string :description, null: false, default: ""
       t.string :url, null: false
-      t.belongs_to :user, null: false
+      t.belongs_to :user
       t.timestamps
     end
   end

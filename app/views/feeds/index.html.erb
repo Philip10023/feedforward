@@ -1,21 +1,25 @@
+
 <h1 class="feedforward-title col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
 
 <div class="feed_list_header">
-  <div class="article_name_one col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-left">Article Feed</div>
-  <div class="article_name_two col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-right">Article Feed</div>
+  <div class="article_name_one col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-left animated slideInLeft">Article Feed</div>
+  <div class="article_name_two col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-right animated slideInRight">Article Feed</div>
   <div class="feed-list col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">
     <% @feeds.each do |feed| %>
       <%if user_signed_in? && current_user.admin? %>
-        <span class='animated slideInLeft game-box'>
-        <div><%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
+        <span class='animated slideInLeft feed-box'>
+        <div><%= feed.description %>
+          <% youtube =youtube_embed(feed.url) %>
+          <p><%= raw(youtube) %></p>
+        <%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
        <%else%>
-        <p class='animated slideInLeft game-box'>
+        <div class='animated slideInLeft feed-box'>
           <div>
             <%= feed.description %>
           </div>
           <%= link_to "Website", feed.url%>
-        </p>
+        </div>
 
        <%end%>
     <% end %>
