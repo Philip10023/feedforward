@@ -8,6 +8,8 @@ Rails.application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
+  # load lib -- phil
+  config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
   # Show full error reports.
   config.consider_all_requests_local = true
