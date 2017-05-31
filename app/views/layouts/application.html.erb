@@ -10,37 +10,41 @@
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <body id="bootstrap-overrides">
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded" >
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="/">FeedForward</a>
+    <a class="navbar-brand" id="feedforward" href="/">FeedForward</a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapsable navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-pills">
         <%if !user_signed_in? %>
-        <li class="nav-item">
-          <a class="nav-link"><%= link_to "Sign up", new_user_registration_path %></a>
-          <a class="nav-link"><%= link_to "Log in", new_user_session_path %></a>
+
+          <li class="nav-link "><%= link_to "Sign up ", new_user_registration_path %></li>
+          <li class="nav-link"><%= link_to "Log in", new_user_session_path %></li>
           <%elsif !current_user.admin?%>
-        <li class="nav-item">
-          <a class="nav-link"><%= link_to "Profile", user_path(current_user.id)%></a>
-          <a class"nav-link"><%= link_to "Sign Out", destroy_user_session_path%></a>
-        </li>
+
+          <li class="nav-link"><%= link_to "Profile", user_path(current_user.id)%></li>
+          <li class="nav-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+
         <%else%>
-        <li class="nav-item">
-          <a class="nav-link"><%= link_to "Profile", user_path(current_user.id)%></a>|
-          <a class"nav-link"><%= link_to "Sign Out", destroy_user_session_path%></a>|
-          <a class"nav-link"><%= link_to "Add To The Feed!!!", new_feed_path%></a>
-        </li>
+
+          <li class="nav-link"><%= link_to "Profile", user_path(current_user.id)%></li>
+          <li class="nav-link"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+          <li class="nav-link"><%= link_to "Add To The Feed!!!", new_feed_path%></li>
+
         <%end%>
       </ul>
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <%= form_tag feeds_path, method: :get do %>
+        <%= text_field_tag :query %>
+
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
     </div>
   </nav>
+  <% end %>
 
     <div class="container">
       <%= yield %>

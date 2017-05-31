@@ -12,11 +12,14 @@
 
  *= require_tree .
  *= require_self
- //= require tether
+ *= require tether
  *= require _bootstrap-custom
+ *= require ./feeds.scss
  *= require ./reviews.scss
  *= require ./body.scss
-
  */
-$grid-float-breakpoint: 10px;
-@import 'bootstrap-custom';
+ /*
+ * Start Bootstrap - Half Slider (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
