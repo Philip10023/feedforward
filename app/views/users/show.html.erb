@@ -1,0 +1,29 @@
+<div class="profile-info">
+  <% if current_user.admin? === true %>
+    <h1><%= @user.username %>'s Profile (Admin) </h1>
+  <%else%>
+    <h1><%= @user.username %>'s Profile</h1>
+  <%end%>
+
+  <h3><%= @user.email %></h3>
+<% if current_user.profile_photo? %>
+  <div class="profile-image">
+    <%= image_tag @user.profile_photo %>
+  </div>
+  <%else%>
+  <%end%>
+    <%= link_to 'Edit Your Profile', edit_user_registration_path %>
+
+  <div>
+    <% if current_user.admin? === true %>
+      <span><%= link_to 'Users', users_path %> | </span>
+      <span><%= link_to 'Feeds', feeds_path %></span>
+    <%else%>
+  <div>
+    <% @user.reviews.each do |review| %>
+    <h2><%= review %></h2>
+    <%end%>
+  </div>
+  <%end%>
+  </div>
+</div>
