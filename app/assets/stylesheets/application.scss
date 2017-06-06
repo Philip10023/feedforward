@@ -12,11 +12,9 @@
 
  *= require_tree .
  *= require_self
- //= require tether
- *= require _bootstrap-custom
- *= require ./reviews.scss
- *= require ./body.scss
+ *= require tether
+
 
  */
 $grid-float-breakpoint: 10px;
-@import 'bootstrap-custom';
+@import 'bootstrap';

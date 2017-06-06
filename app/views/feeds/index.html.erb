@@ -13,11 +13,13 @@
           <% youtube =youtube_embed(feed.url) %>
           <p><%= raw(youtube) %></p>
         <%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
+        <p class='animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
        <%else%>
         <div class='animated slideInLeft feed-box'>
           <div>
             <%= feed.description %>
           </div>
+          <p class='animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
           <%= link_to "Website", feed.url%>
         </div>
 
