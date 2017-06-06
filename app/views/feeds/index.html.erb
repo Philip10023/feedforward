@@ -8,18 +8,18 @@
   <div class="feed-list col-xs-12 col-sm-6 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">
     <% @feeds.each do |feed| %>
       <%if user_signed_in? && current_user.admin? %>
-        <span class='animated slideInLeft feed-box'>
+        <span class='animated slideInLeft feed-box text-center'>
         <div><%= feed.description %>
           <% youtube =youtube_embed(feed.url) %>
           <p><%= raw(youtube) %></p>
         <%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
-        <p class='animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
+        <p class='animated slideInLeft feed-box text-center'><%= link_to "comments", feed %></p>
        <%else%>
-        <div class='animated slideInLeft feed-box'>
+        <div class='animated slideInLeft feed-box text-center'>
           <div>
             <%= feed.description %>
           </div>
-          <p class='animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
+          <p class='animated slideInLeft feed-box text-center'><%= link_to "comments", feed %></p>
           <%= link_to "Website", feed.url%>
         </div>
 

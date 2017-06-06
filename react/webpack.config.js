@@ -1,4 +1,4 @@
-require('../node_modules/prop-types');
+
 var config = {
   entry: {
     path: './react/src/main.js',
