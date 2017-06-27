@@ -10,6 +10,73 @@ margin:7px auto;
 
 }
 
+.panel-shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
+}
+.panel-white {
+  border: 10px solid #dddddd;
+}
+.panel-white  .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.panel-white  .panel-footer {
+  background-color: #fff;
+  border-color: #ddd;
+}
+
+.review {
+  border: 5px solid #dddddd;
+  width:90%;
+  height: 30%;
+  margin:7px auto;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+.the-form {
+  border: 5px solid #dddddd;
+  width:90%;
+  height: 30%;
+  margin:7px auto;
+  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+.message{
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.review-show {
+  border: 5px solid #dddddd;
+  width:90%;
+  height: 30%;
+  margin:7px auto;
+}
+#form-buttons{
+}
+.collapse {
+    display: table;
+    position: relative;
+	background-color: #f9fafa;
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+
+.btn {
+	padding: 2px 6px;
+	cursor: pointer;
+}
+
+.spoiler-body {
+	padding: 6px;
+}
+
 
 
 
