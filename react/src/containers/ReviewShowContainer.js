@@ -98,10 +98,14 @@ class ReviewShowContainer extends Component {
       }
     })
     return(
-      <div className="small-9 small-centered columns main">
+      <div>
+      <div className="review">
 
         {reviews.reverse()}
+      </div>
+      <div className="form-show">
         {formShow}
+      </div>
       </div>
     )
   }

@@ -9,8 +9,11 @@ Rails.application.routes.draw do
       resources :reviews, only: [:create, :update]
     end
   end
-
   devise_for :users
   resources :users, except: [:new, :create]
+
+  devise_scope :user do
+  get "sign_out", :to => "devise/sessions#destroy"
+end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

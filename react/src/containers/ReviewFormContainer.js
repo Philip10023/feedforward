@@ -44,18 +44,20 @@ constructor(props) {
       errorDiv = <div className="callout alert">{errorItems}</div>
     }
   return (
-    <form className="callout" onSubmit={this.handleFormSubmit}>
+    <form className="callout the-form" onSubmit={this.handleFormSubmit}>
         {errorDiv}
+      <div className="message">
         <BodyField
           content={this.state.bodyConsumed}
-          label='Message'
+          label=''
           name='message'
           handlerFunction={this.handleBodyChange}
         />
+      </div>
 
-        <ButtonToolbar>
-          <Button bsStyle="primary" bsSize="large" active type="submit">Submit</Button>
-          <Button bsSize="large" active onClick={this.handleClearForm}>Clear</Button>
+        <ButtonToolbar className="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 " id="form-buttons">
+          <Button className="" bsStyle="primary" bsSize="large" active type="submit">Submit</Button>
+          <Button className="" bsSize="large" active onClick={this.handleClearForm}>Clear</Button>
         </ButtonToolbar>
       </form>
     );

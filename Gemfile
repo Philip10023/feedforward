@@ -22,6 +22,7 @@ gem 'pg_search'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'animate.css-rails', '~> 3.2'
 gem 'youtube_id'
+gem 'record_tag_helper', '~> 1.0'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'

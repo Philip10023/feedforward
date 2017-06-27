@@ -1,29 +1,64 @@
 
-<h1 class="feedforward-title col-xs-12 col-sm-6 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
+<h1 class="feedforward-title col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
 
 <div class="feed_list_header">
-  <span class="article col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-lg-12 col-lg-offset-2">
+  <span class="article col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2">
   <div class="text-left animated slideInLeft">Article Feed</div><div class="text-right animated slideInRight">Article Feed</div> </span>
-  <div class="feed-list col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
+  <div class="feed-list col-xs-12 col-sm-12 col-md-11 col-med-offset-1 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
     <% @feeds.each do |feed| %>
-      <%if current_user.admin? %>
-        <span class='col-xs-12 col-sm-6 col-md-6 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center feed-box'>
-        <div><h3><%= feed.description %></h3>
+      <%if user_signed_in? && current_user.admin? %>
+      <div class="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
+        <div><h3><%= feed.description %></h3></div>
           <% youtube =youtube_embed(feed.url) %>
-          <p class="video"><%= raw(youtube) %></p>
-        <%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </span>
-        <p class='col-xs-12 col-sm-6 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <button class="btn primary">
+                    <a data-toggle="collapse" href="#feed_<%=feed.id%>">Watch ↓</a>
+                  </button>
+                </h4>
+              </div>
+              <%= div_for feed, :class => "panel-collapse collapse col-xs-12 col-sm-12 col-md-11 col-med-offset-1 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center" do %>
+
+                <%= raw(youtube) %>
+
+              </div>
+            </div>
+          <%end%>
+        <p class='col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center feed-box'>
+
+
+        <%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </p>
+        <p class='col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
+      </div>
        <%else%>
-        <div class='col-xs-12 col-sm-6 col-sm-offset-2 col-lg-1 col-lg-offset-2 animated slideInLeft feed-box text-center'>
-          <div>
-            <%= feed.description %>
+       <div class="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
+         <div><h3><%= feed.description %></h3></div>
+           <% youtube =youtube_embed(feed.url) %>
+             <div class="panel panel-default">
+               <div class="panel-heading">
+                 <h4 class="panel-title">
+                   <button class="btn primary">
+                     <a data-toggle="collapse" href="#feed_<%=feed.id%>">Watch ↓</a>
+                   </button>
+                 </h4>
+               </div>
+               <%= div_for feed, :class => "panel-collapse collapse col-xs-12 col-sm-12 col-md-11 col-med-offset-1 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center" do %>
+
+                 <%= raw(youtube) %>
+
+               </div>
+             </div>
+           <%end%>
+          <div class='col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 animated slideInLeft feed-box text-center'>
+            <p><%= link_to "comments", feed %></p>
+            <%= link_to "Website", feed.url%>
           </div>
-          <p class='col-xs-12 col-sm-6 col-sm-offset-2 col-lg-1 col-lg-offset-2 animated slideInLeft feed-box text-center'><%= link_to "comments", feed %></p>
-          <%= link_to "Website", feed.url%>
         </div>
 
        <%end%>
     <% end %>
+    </div>
   </div>
 </div>
