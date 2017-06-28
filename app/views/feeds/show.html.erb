@@ -1,9 +1,9 @@
 <% if !user_signed_in? %>
 <div class="alert alert-warning">Sign in to write a comment!</div>
 <%end%>
-<h1 class="feedforward-title col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
+<h1 class="feedforward-title col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
-<div class="feed-details col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
+<div class="feed-details col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">
   <h3><%= @feed.description %></h3>
   <div class="feed-url">
     <%= link_to "Website", @feed.url%>
@@ -13,13 +13,13 @@
       <% youtube =youtube_embed(@feed.url) %>
       <p><%= raw(youtube) %></p>
    <%else%>
-    <div class='animated slideInLeft feed-box'>
+    <div class='animated slideInLeft feed-box '>
         <% youtube =youtube_embed(@feed.url) %>
         <p><%= raw(youtube) %></p>
 
     </div>
    <%end%>
-</div>
-<div class="panel panel-white post panel-shadow">
-  <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 "></div>
+ </div>
+<div class="panel panel-white post panel-shadow text-center comment-main">
+  <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-6 col-lg-offset-2 "></div>
 </div>

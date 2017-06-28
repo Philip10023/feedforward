@@ -14,3 +14,25 @@
  .article {
    font-size: 70%;
  }
+ .feed-box {
+ 	position: relative;
+ 	padding-bottom: 56.25%; /* 16:9 */
+ 	padding-top:10px;
+ 	height: 50%;
+	width: 100%;
+ }
+
+ .video {
+     display: table;
+     position: relative;
+ 	background-color: #f9fafa;
+ 	border: 1px solid #ddd;
+ 	margin-bottom: 10px;
+ }
+ .feed-box {
+     display:table-cell;
+     position: relative;
+ 	background-color: #f9fafa;
+ 	border: 1px solid #ddd;
+ 	margin-bottom: 10px;
+ }

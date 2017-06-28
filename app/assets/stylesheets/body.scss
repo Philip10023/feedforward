@@ -26,26 +26,18 @@ margin:7px auto;
   border-color: #ddd;
 }
 
-.review {
+.comment-main {
   border: 5px solid #dddddd;
   width:90%;
   height: 30%;
   margin:7px auto;
+  padding-top: 25px;
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
 }
-.the-form {
-  border: 5px solid #dddddd;
-  width:90%;
-  height: 30%;
-  margin:7px auto;
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-}
+
 
 .message{
   padding: 5px;
@@ -60,13 +52,6 @@ margin:7px auto;
 }
 #form-buttons{
 }
-.collapse {
-    display: table;
-    position: relative;
-	background-color: #f9fafa;
-	border: 1px solid #ddd;
-	margin-bottom: 10px;
-}
 
 .btn {
 	padding: 2px 6px;
@@ -75,6 +60,12 @@ margin:7px auto;
 
 .spoiler-body {
 	padding: 6px;
+}
+.feed-details {
+  float:left;
+	padding-bottom: 70%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
 
 
