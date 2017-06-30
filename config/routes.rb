@@ -9,6 +9,10 @@ Rails.application.routes.draw do
       resources :reviews, only: [:create, :update]
     end
   end
+
+      unauthenticated do
+        root 'devise/sessions#new', as: :unauthenticated_root
+      end
   devise_for :users
   resources :users, except: [:new, :create]
 
