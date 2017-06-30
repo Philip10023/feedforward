@@ -259,5 +259,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
   youtube_id
 
+RUBY VERSION
+   ruby 2.3.3p222
+
 BUNDLED WITH
    1.15.1
