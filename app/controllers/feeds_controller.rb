@@ -49,7 +49,7 @@ end
 
   def destroy
     if current_user.admin?
-      Feed.find(params[:id]).forwards.destroy_all
+      Feed.find(params[:id]).reviews.destroy_all
       Feed.find(params[:id]).destroy
       flash[:success] = "Feed deleted"
       redirect_to feeds_path, notice: "Feed Deleted"

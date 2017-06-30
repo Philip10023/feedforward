@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BodyField from '../components/BodyField'
 import { Button } from 'react-bootstrap';
 import { ButtonToolbar } from 'react-bootstrap';
+import { Glyphicon } from 'react-bootstrap'
 class FormContainer extends Component {
 constructor(props) {
   super(props);
@@ -49,15 +50,15 @@ constructor(props) {
       <div className="message">
         <BodyField
           content={this.state.bodyConsumed}
-          label=''
+          label=""
           name='message'
           handlerFunction={this.handleBodyChange}
         />
       </div>
 
         <ButtonToolbar className="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 " id="form-buttons">
-          <Button className="" bsStyle="primary" bsSize="large" active type="submit">Submit</Button>
-          <Button className="" bsSize="large" active onClick={this.handleClearForm}>Clear</Button>
+          <Button className="" bsStyle="primary" bsSize="lg" active type="submit"><span class="glyphicon glyphicon-home">Submit</span></Button>
+          <Button className="" bsSize="lg" active onClick={this.handleClearForm}>Clear</Button>
         </ButtonToolbar>
       </form>
     );
