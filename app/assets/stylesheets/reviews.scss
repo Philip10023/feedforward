@@ -1,4 +1,17 @@
 .comment-main{
   width: 50%;
-  float: left;
+  float: left
+}
+
+.durr, .hurr{
+  float:left;
+
+}
+.hurr {
+  float: right;
+  height: 20px;
+}
+.review{
+  overflow: scroll;
+    height: 500px;
 }
