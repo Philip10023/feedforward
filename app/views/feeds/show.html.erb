@@ -1,16 +1,16 @@
 <% if !user_signed_in? %>
 <div class="alert alert-warning">Sign in to write a comment!</div>
 <%end%>
-  <h1 class="feedforward-title col-xs-12 col-sm-4 col-md-8 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
+  <h1 class="feedforward-title col-xs-2 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
-  <h3 class="feedforward-title col-xs-12 col-sm-4 col-md-8 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center"><%= @feed.description %></h3>
-<div class="show-body col-xs-12 col-sm-4 col-md-8 col-sm-offset-2 col-lg-12 col-lg-offset-2">
-  <div class="feed-details col-xs-12 col-sm-4 col-md-8 col-sm-offset-2 col-lg-6 col-lg-offset-2 text-center">
-    <div class="feed-url">
-      <%= link_to "Website", @feed.url%>
-    </div>
+  <h3 class="feedforward-title col-xs-2 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 text-center"><%= @feed.description %></h3>
+  <div class="feed-url text-center">
+    <%= link_to "Website", @feed.url%>
+  </div>
+<div class="show-body col-xs-2 col-sm-8 col-md-8  col-lg-12 col-lg-offset-2">
+  <div class="feed-details col-xs-2 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 text-center">
     <%if user_signed_in? && current_user.admin? %>
-      <span class='animated slideInLeft video-box'>
+      <span class='animated slideInLeft video-box '>
         <% youtube =youtube_embed(@feed.url) %>
         <p><%= raw(youtube) %></p>
      <%else%>
@@ -21,7 +21,7 @@
       </div>
      <%end%>
    </div>
+ </div>
   <div id="app-container" class="panel panel-white post panel-shadow text-center comment-main">
-    <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-12 col-sm-4 col-md-8 col-sm-offset-2 col-lg-6 col-lg-offset-2 "></div>
+    <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-8 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 "></div>
   </div>
-</div>
