@@ -23,6 +23,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'animate.css-rails', '~> 3.2'
 gem 'youtube_id'
 gem 'record_tag_helper', '~> 1.0'
+gem 'unicorn', '~> 5.1' # make sure you follow installation instructions for this gem
+gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
@@ -46,7 +49,6 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
-
 gem 'rails_12factor', group: :production
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
