@@ -1,3 +1,8 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
 .container{
   background-size: cover;
   background-color:#1ab2ba;
@@ -20,27 +25,21 @@ html{
 .feed-list-item{
   background-color: #1ab2ba;
 }
-.review{
-  border: inherit;
-  float: left;
-  border: 5px solid #604848;
-  width:120%;
-  height: 30%;
-  margin:7px auto;
 
-    height: 30%;
-    overflow: auto;
-}
 
 .review-show{
-  overflow: scroll;
+  padding-bottom: 40px;
+  height: 100px;
+
+  margin-bottom: 10px;
+  padding-top: 8px;
+  overflow: auto;
   word-wrap: break-word;
    white-space: pre-wrap;
     border-radius: 10px;
   background-color: #82d2d6;
   border: 5px solid #604848;
   width:100%;
-  height: 30%;
 
 }
 
@@ -64,42 +63,40 @@ margin:7px auto;
     box-shadow: rgba(0, 0, 0, 0.3) 7px 7px 7px;
 }
 
-.show-body{
-  padding-right: 1cm;
-  width:90%;
-  height: 30%;
-  margin:7px auto;
+#show-body{
+  text-align: center;
+    height:100%;
+    width:100%;
+    overflow: hidden;
   -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  text-align: center;
 
   background-size: cover;
   background-color: #1ab2ba;
 }
-.container > span > #app-container {
-  width:100%;
-  height: 70%;
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
+
+
+
+.container > span > #app-container > #app > .review  {
+  border-right: 100px;
+  float: right;
+  word-wrap: break-all;
+   white-space: pre-wrap;
+  background-color: #82d2d6;
+  border: 5px solid #604848;
+  font-size: 20px;
+  padding-bottom: 40px;
+
+
+  margin-bottom: 10px;
+  padding-top: 8px;
+
+    overflow: auto;
+
 }
 
-
-.container > span > #app-container > #app  {
-
-    padding-right: 1.3cm;
-    border-radius: 10px;
-  float: left;
-  width:100%;
-  height: 70%;
-  -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-}
 
 
 
@@ -112,14 +109,6 @@ margin:7px auto;
 	cursor: pointer;
 }
 
-.feed-details {
-  text-align: center;
-  border-spacing: 50px;
-  padding-left: 50px;
-	padding-bottom: 50%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
 .feed-list {
   padding-right: -10px;
   padding-left: -10px;

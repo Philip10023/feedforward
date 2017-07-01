@@ -24,11 +24,11 @@
 
               </div>
           <%end%>
-        <p class='col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center feed-box'>
 
 
-          <p class='col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center animated slideInLeft feed-box'><%= link_to "comments", feed %></p>
-        <div><%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> </p>
+
+          <%= link_to "comments", feed %>
+        <div><%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> 
       </div>
        <%else%>
        <div class="col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">

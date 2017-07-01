@@ -1,43 +1,21 @@
-.video {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
+#show-body > .video-box, p, iframe  {
+	text-align: center;
+	width:100%;
+  border-spacing: 50px;
 	padding-top: 25px;
-	height: 0;
 }
-#player{
-	width: 150%;
-		position: relative;
- background-color: #82d2d6;
- border: 1px solid #ddd;
- margin-bottom: 10px;
-}
-.video iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-.video-box > p > iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
+
+
+
+
  .article {
    font-size: 70%;
  }
  .feed-box {
+	 height: 10%;
 	 width: 100%;
      position: relative;
  	background-color: #82d2d6;
- 	border: 1px solid #ddd;
- 	margin-bottom: 10px;
- }
-
- .video {
- 	background-color: #f9fafa;
  	border: 1px solid #ddd;
  	margin-bottom: 10px;
  }
