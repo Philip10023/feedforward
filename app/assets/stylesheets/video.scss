@@ -1,8 +1,12 @@
-#show-body > .video-box, p, iframe  {
+#show-body > video-box,  iframe  {
 	text-align: center;
-	width:100%;
+	width: 90%;
   border-spacing: 50px;
-	padding-top: 25px;
+	overflow: auto;
+	word-wrap: break-word;
+	 white-space: pre-wrap;
+	 border: 5px solid #604848;
+
 }
 
 
