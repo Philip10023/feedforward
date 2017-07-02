@@ -98,14 +98,14 @@ class ReviewShowContainer extends Component {
       }
     })
     return(
-      <div>
-      <div className="review">
+      <div className= " col-lg-12 review-container">
+        <div className="form-show col-xs-4 col-sm-12 col-lg-11 text-center">
+          {formShow}
+        </div>
+        <div className="review">
 
-        {reviews.reverse()}
-      </div>
-      <div className="form-show">
-        {formShow}
-      </div>
+          {reviews.reverse()}
+        </div>
       </div>
     )
   }
