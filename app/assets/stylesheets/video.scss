@@ -1,12 +1,13 @@
 #show-body > video-box,  iframe  {
+	position: relative;
 	text-align: center;
-	width: 90%;
-  border-spacing: 50px;
+	width: 100%;
+  border-spacing: 100px;
 	overflow: auto;
 	word-wrap: break-word;
 	 white-space: pre-wrap;
 	 border: 5px solid #604848;
-
+	 height: auto;
 }
 
 
