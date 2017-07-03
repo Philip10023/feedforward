@@ -115,11 +115,11 @@ margin:7px auto;
   height: 30%;
   margin:-7px
 }
-.feed-list-item {
+.feed-list > .feed-list-item > .panel > .feed, .video > iframe {
   border-spacing: 50px;
   border: 5px solid #604848;
-  width:80%;
-  height: 30%;
+  width:101%;
+  height: 40%;
   margin:7px auto;
 }
 
