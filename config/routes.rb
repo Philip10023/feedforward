@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'events/index'
+
   root to: 'feeds#index'
   resources :feeds, only: [:index, :show, :create, :new, :destroy]
-  resources :reviews, only: [:index, :destroy]
+  resources :reviews, only: [:index, :destroy, :new]
 
   namespace :api do
     namespace :v1 do
@@ -15,5 +17,6 @@ Rails.application.routes.draw do
   devise_scope :user do
   get "sign_out", :to => "devise/sessions#destroy"
 end
+mount ActionCable.server => '/cable'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

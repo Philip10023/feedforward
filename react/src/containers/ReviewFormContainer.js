@@ -56,9 +56,9 @@ constructor(props) {
         />
       </div>
 
-        <ButtonToolbar className="col-xs-12 col-sm-12 col-md-11 col-sm-offset-2 col-lg-12 col-lg-offset-2 " id="form-buttons">
-          <Button className="" bsStyle="primary" bsSize="lg" active type="submit"><span class="glyphicon glyphicon-home">Submit</span></Button>
-          <Button className="" bsSize="lg" active onClick={this.handleClearForm}>Clear</Button>
+        <ButtonToolbar className="" id="form-buttons">
+          <Button className="" bsStyle="primary" bsSize="sm" active type="submit"><span>Submit</span></Button>
+          <Button className="" bsSize="sm" active onClick={this.handleClearForm}>Clear</Button>
         </ButtonToolbar>
       </form>
     );
