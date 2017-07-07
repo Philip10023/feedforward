@@ -8,6 +8,9 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
+.env
+/node_modules
+
 /log/*
 /tmp/*
 !/log/.keep
