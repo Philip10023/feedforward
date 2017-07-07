@@ -2,7 +2,7 @@ module Youtubemodule
   def youtube_embed(youtube_url)
     @youtube_id = YoutubeID.from(youtube_url)
 
-    @youtube_video = "<iframe width=100%  height=520 src='http://www.youtube.com/embed/#{@youtube_id}' frameborder='0'  allowfullscreen></iframe>"
+    @youtube_video = "<iframe width=100%  height=520 src='https://www.youtube.com/embed/#{@youtube_id}' frameborder='0'  allowfullscreen></iframe>"
   end
     def self.included m
     return unless m < ActionController::Base
