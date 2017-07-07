@@ -25,6 +25,7 @@ gem 'youtube_id'
 gem 'record_tag_helper', '~> 1.0'
 gem 'redis', '~> 3.2'
 gem 'turbolinks', '~> 5.0.0'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
@@ -48,6 +49,9 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+gem 'rails_12factor', group: :production
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+ruby "2.3.3"
