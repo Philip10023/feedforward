@@ -38,7 +38,7 @@ Rails.application.configure do
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
-
+  config.action_cable.url = "wss://sitepoint-actioncable.herokuapp.com/cable"
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
 
@@ -80,6 +80,8 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
+  config.action_cable.allowed_request_origins = ['https://peaceful-ravine-73963.herokuapp.com',
+                                               'http://peaceful-ravine-73963.herokuapp.com']
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
