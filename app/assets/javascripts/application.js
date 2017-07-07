@@ -12,8 +12,8 @@
 //
 //= require jquery2
 //= require jquery_ujs
-//= require turbolinks
 //= require bundle
+//= require turbolinks
 //= require cable
 $.fn.ready(function() {
     // Spoiler
