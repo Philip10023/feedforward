@@ -98,8 +98,8 @@ class ReviewShowContainer extends Component {
       }
     })
     return(
-      <div className= " col-lg-12 review-container">
-        <div className="form-show col-xs-4 col-sm-12 col-lg-11 text-center">
+      <div className= "text-left col-lg-12 review-container">
+        <div className="form-show col-xs-5 col-sm-12 col-lg-11 text-left">
           {formShow}
         </div>
         <div className="review">

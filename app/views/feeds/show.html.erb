@@ -1,13 +1,13 @@
 <% if !user_signed_in? %>
 <div class="alert alert-warning">Sign in to write a comment!</div>
 <%end%>
-  <h1 class="feedforward-title col-xs-2 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
+  <h1 class="feedforward-title col-xs-2 col-sm-10 col-md-12  col-lg-6 col-lg-offset-2 text-center">FeedForward! Where your shitty opinion has value.</h1>
 
-  <h3 class="feedforward-title col-xs-2 col-sm-8 col-md-8  col-lg-6 col-lg-offset-2 text-center"><%= @feed.description %></h3>
+  <h3 class="feedforward-title col-xs-2 col-sm-10 col-md-12  col-lg-6 col-lg-offset-2 text-center"><%= @feed.description %></h3>
   <div class="feed-url text-center">
     <%= link_to "Website", @feed.url%>
   </div>
-<div id="show-body" class="show-body col-xs-2 col-sm-14 col-md-8 text-center col-lg-12 col-lg-offset-2">
+<div id="show-body" class="show-body col-xs-2 col-sm-14 col-md-12 text-center col-lg-12 col-lg-offset-2">
 
 
       <span class='animated slideInLeft video-box '>
@@ -16,6 +16,6 @@
 
 
  </div>
-  <div id="app-container" class="panel panel-white post panel-shadow text-center comment-main">
-    <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-4 col-sm-8 col-md-8  col-lg-12 col-lg-offset-2 text-center"></div>
+  <div id="app-container" class="panel panel-white post panel-shadow text-left comment-main">
+    <div id="app" data-currentuser='<%= current_user.to_json %>' class="col-xs-2 col-sm-10 col-md-12  col-lg-12 col-lg-offset-2 text-left"></div>
   </div>
