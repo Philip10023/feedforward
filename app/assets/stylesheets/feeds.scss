@@ -14,7 +14,6 @@
 html{
   background-color:#1ab2ba;
   border: 5px solid #604848;
-  height: 30%;
 
 
 }
@@ -44,7 +43,6 @@ html{
   font-size: 80%;
 color: #604848;
 width:90%;
-height: 30%;
 margin:7px auto;
 -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -112,15 +110,16 @@ margin:7px auto;
   border-spacing: 30px;
   border: 5px solid #604848;
   width:100%;
-  height: 30%;
+  height: 100%;
   margin:-7px
 
 }
-.feed-list-item {
+
+.feed-list > .feed-list-item > .panel > .feed .video .panel-collapse {
   border-spacing: 50px;
   border: 5px solid #604848;
-  width:80%;
-  height: 30%;
+  width:150%;
+  height: 100%;
   margin:7px auto;
 }
 

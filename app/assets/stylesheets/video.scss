@@ -1,12 +1,12 @@
-#show-body > video-box,  iframe  {
+#show-body > video-box  {
+	position: relative;
 	text-align: center;
-	width: 90%;
-  border-spacing: 50px;
+	width: 120%;
+  border-spacing: 100px;
 	overflow: auto;
 	word-wrap: break-word;
 	 white-space: pre-wrap;
 	 border: 5px solid #604848;
-
 }
 
 
@@ -16,7 +16,7 @@
    font-size: 70%;
  }
  .feed-box {
-	 height: 10%;
+	 height: 100%;
 	 width: 100%;
      position: relative;
  	background-color: #82d2d6;

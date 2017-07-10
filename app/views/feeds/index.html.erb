@@ -27,8 +27,8 @@
 
 
 
-          <%= link_to "comments", feed %>
-        <div><%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div> 
+          <%= link_to "comments", feed, data: {turbolinks: false} %>
+        <div><%= link_to "Website", feed.url%> | <%= link_to "delete", feed, method: :delete, data: { confirm: "You sure?" } %></div>
       </div>
        <%else%>
        <div class="col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
@@ -50,7 +50,7 @@
              </div>
            <%end%>
           <div class='col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 animated slideInLeft feed-box text-center'>
-            <p><%= link_to "comments", feed %></p>
+            <p><%= link_to "comments", feed, data: {turbolinks: false} %></p>
             <%= link_to "Website", feed.url%>
           </div>
       </div>

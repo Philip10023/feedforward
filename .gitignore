@@ -9,7 +9,12 @@
 
 # Ignore all logfiles and tempfiles.
 .env
+<<<<<<< HEAD
 .node_modules
+=======
+/node_modules
+
+>>>>>>> 6531479c95cf805c7387e02d12ed3f4927776b98
 /log/*
 /tmp/*
 !/log/.keep
