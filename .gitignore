@@ -8,10 +8,10 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-.env
-<<<<<<< HEAD
+
 .node_modules
-=======
+.env
+
 /node_modules
 
 >>>>>>> 6531479c95cf805c7387e02d12ed3f4927776b98
@@ -19,6 +19,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/coverage
 
 # Ignore Byebug command history file.
 .byebug_history

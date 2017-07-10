@@ -25,6 +25,11 @@ gem 'youtube_id'
 gem 'record_tag_helper', '~> 1.0'
 gem 'redis', '~> 3.2'
 gem 'turbolinks', '~> 5.0.0'
+
+group :test do
+  gem 'coveralls', require: false
+end
+
 group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
