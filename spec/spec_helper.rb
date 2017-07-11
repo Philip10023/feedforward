@@ -6,14 +6,7 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 
-require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
-require 'coveralls'
-Coveralls.wear!
-SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-  CodeClimate::TestReporter::Formatter,
-  Coveralls::SimpleCov::Formatter
-]
+
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
