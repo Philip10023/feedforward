@@ -1,10 +1,7 @@
 require 'rails_helper'
 
-feature 'create account', %Q{
-    As a prospective user
-    I want to create an account
-    So that I can post items and review them
-  } do
+feature 'create account' do
+
     # Acceptance Criteria:
     # On the sign in page, there is a button to create an account
     # The button does not appear if you are signed in
@@ -58,6 +55,6 @@ feature 'create account', %Q{
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
 
-      expect(page).to have_content("Welcome! You have signed up successfully.")
+      expect(page).to have_content("FeedForward!")
     end
 end
