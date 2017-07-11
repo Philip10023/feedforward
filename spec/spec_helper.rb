@@ -6,7 +6,7 @@
 require 'coveralls'
 Coveralls.wear!('rails')
 
-#
+
 # Given that it is always loaded, you are encouraged to keep this file as
 # light-weight as possible. Requiring heavyweight dependencies from this file
 # will add to the boot time of your test suite on EVERY test run, even for an
@@ -81,6 +81,7 @@ RSpec.configure do |config|
     # (e.g. via a command-line flag).
     config.default_formatter = 'doc'
   end
+
 
   # Print the 10 slowest examples and example groups at the
   # end of the spec run, to help surface which specs are running
