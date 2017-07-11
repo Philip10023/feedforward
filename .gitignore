@@ -10,9 +10,7 @@
 # Ignore all logfiles and tempfiles.
 
 .node_modules
-.env
 /node_modules
-
 .env
 /log/*
 /tmp/*
