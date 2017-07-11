@@ -28,21 +28,19 @@ gem 'turbolinks', '~> 5.0.0'
 
 group :test do
   gem 'coveralls', require: false
+  gem 'database_cleaner'
 end
 
-group :test do
-  gem "simplecov"
-  gem "codeclimate-test-reporter", "~> 1.0.0"
-end
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'factory_girl'
   gem 'valid_attribute'
   gem 'shoulda-matchers', require: false
+  gem "dotenv-rails"
 end
 
 group :development, :test do
