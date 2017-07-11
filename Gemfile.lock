@@ -59,6 +59,8 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    codeclimate-test-reporter (1.0.7)
+      simplecov
     coderay (1.1.1)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
@@ -248,6 +250,7 @@ DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   byebug
   capybara
+  codeclimate-test-reporter (~> 1.0.0)
   coffee-rails (~> 4.2)
   coveralls
   devise
@@ -267,6 +270,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
+  simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5.0.0)
