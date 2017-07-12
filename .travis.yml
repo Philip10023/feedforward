@@ -1,8 +1,0 @@
-language: ruby
-rvm:
- - 2.2
- - jruby
- - rbx-2
-
-env:
-  CODECLIMATE_REPO_TOKEN: 3e4e42551665904981a763bab8ae22e2ca8e0cdbd7e14a9a394a541371383c18
