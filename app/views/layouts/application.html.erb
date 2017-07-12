@@ -41,10 +41,16 @@
         </li>
         <%end%>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">🔎</button>
+      <form>
+        <%= form_tag(feeds_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :query, params[:query], placeholder: "" %>
+        <%= submit_tag "search🔎", class: 'btn btn-default' %>
+        <% end %>
       </form>
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input id="feedsearch" class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">🔎</button>
+      </form> -->
     </div>
   </nav>
 <div>
@@ -55,7 +61,7 @@
       <span>
       <%= yield %>
     </span>
-</div>    
+</div>
     </div>
 
 
