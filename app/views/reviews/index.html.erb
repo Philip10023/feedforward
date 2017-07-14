@@ -1,3 +1,4 @@
+<h1> Reviews Index! </h1>
 <% @reviews.each do |review| %>
  <ul>
   <li><%= review.message %><%= link_to "delete", review, method: :delete, data: { confirm: "You sure?" } %></li>
