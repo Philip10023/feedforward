@@ -26,7 +26,7 @@ end
   end
 
   def new
-    if current_user.admin?
+    if current_user.try(:admin?)
       @feed = Feed.new
     else
       flash[:notice] = 'You must be an admin to add a feed'
@@ -38,11 +38,12 @@ end
   def create
     @feed = Feed.new(feed_params)
     @feed.user_id = current_user.id if current_user
-    if @feed.save && current_user.admin?
+    if @feed.save && current_user.try(:admin?)
 
       flash[:notice] = 'Feed successfully saved!'
       redirect_to feeds_path
     else
+      flash[:notice] = 'url not used!'
       render action: 'index'
     end
   end
