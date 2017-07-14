@@ -1,11 +1,11 @@
 
 <h1 class="feedforward-title col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">FeedForward!</h1>
-<h1 class="feedforward-title col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">Where your shitty opinion has value.</h1>
+<h1 class="feedforward-title col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">Where your opinion has value.</h1>
 
 
 <div class="feed_list_header"></div>
   <div class="feed-list col-xs-1 col-md-6 col-md-12 col-med-offset-1 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
-    <% @feeds.each do |feed| %>
+    <% @feeds.present? && @feeds.each do |feed| %>
     <div class=" feed-list-item col-xs-1 col-md-6 col-md-12 col-sm-offset-2 col-lg-12 col-lg-offset-2 text-center">
       <%if user_signed_in? && current_user.admin? %>
         <div><h3><%= feed.description %></h3></div>

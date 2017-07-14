@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    if user_signed_in? && current_user.admin?
+    if user_signed_in? && current_user.try(:admin?)
       @users = User.all
     else
       redirect_to root_path
