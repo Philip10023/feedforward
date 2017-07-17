@@ -26,6 +26,7 @@ feature "visitor sees feed details" do
     visit feed_path(thefeed)
 
     expect(page).to have_content thefeed.description
+    expect(page).to_not have_content thefeed.url
     expect(page).to_not have_content chrono_trigger.description
   end
 end
