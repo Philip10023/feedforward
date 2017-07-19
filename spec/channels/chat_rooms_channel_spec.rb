@@ -1,5 +1,4 @@
 require "rails_helper"
-require "pry"
 
 class TestConnection
   attr_reader :identifiers, :logger
@@ -20,12 +19,11 @@ end
 RSpec.describe ChatRoomsChannel do
 
   let(:current_user) { FactoryGirl.create(:user, id: "1", username: "Bob", email: "joshmo@gmail.com") }
-  
+
   subject(:channel) { described_class.new(connection, current_user) }
 
   # Connection is `identified_by :current_profile`
   let(:connection) { TestConnection.new(current_user: current_user) }
-  binding.pry
   let(:action_cable) { ActionCable.server }
 
   # ActionCable dispatches actions by the `action` attribute.
