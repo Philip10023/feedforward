@@ -9,10 +9,11 @@ feature "visitor can search feeds" do
   end
 
   scenario "user searches for feed and sees results" do
-    first_feed = FactoryGirl.create(:feed)
-    second_feed = FactoryGirl.create(:feed, description: "Whee")
-    third_feed = FactoryGirl.create(:feed, description: "Bobby")
-    fourth_feed = FactoryGirl.create(:feed)
+    @user = FactoryGirl.create(:user)
+    first_feed = FactoryGirl.create(:feed, user: @user)
+    second_feed = FactoryGirl.create(:feed, user: @user, description: "Whee")
+    third_feed = FactoryGirl.create(:feed, user: @user, description: "Bobby")
+    fourth_feed = FactoryGirl.create(:feed, user: @user)
     visit root_path
 
     fill_in :placeholder => "", :with => second_feed.description
