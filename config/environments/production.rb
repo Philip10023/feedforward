@@ -80,8 +80,8 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger = ActiveSupport::TaggedLogging.new(logger)
   end
-  config.action_cable.allowed_request_origins = ['https://blooming-fjord-27337.herokuapp.com',
-                                               'http://blooming-fjord-27337.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://feedsforward.herokuapp.com',
+                                               'http://feedsforwrd.herokuapp.com']
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
