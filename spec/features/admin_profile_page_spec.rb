@@ -64,7 +64,7 @@ feature 'expectations for an admin' do
 
   scenario 'admin clicks feeds and removes user from database' do
     bob = FactoryGirl.create(:admin)
-    feed = FactoryGirl.create(:feed)
+    feed = FactoryGirl.create(:feed, user: bob)
 
     visit new_user_session_path
     fill_in 'Email', with: bob.email

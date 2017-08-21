@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'pry'
 
 describe Api::V1::FeedsController, type: :controller do
 
@@ -6,9 +7,9 @@ describe Api::V1::FeedsController, type: :controller do
 
   describe "GET #show" do
     before(:each) do
-      @feed = FactoryGirl.create(:feed)
-      @other_feed = FactoryGirl.create(:feed)
       @user = FactoryGirl.create(:user)
+      @feed = FactoryGirl.create(:feed, user: @user)
+      @other_feed = FactoryGirl.create(:feed, user: @user)
       @review_one = Review.create(
         message: "first review", feed: @feed, user: @user
       )
