@@ -34,7 +34,6 @@ end
 
 
 group :development, :test do
-  gem 'rspec'
   gem 'factory_girl_rails'
   gem 'pry-rails'
   gem 'rspec-rails'

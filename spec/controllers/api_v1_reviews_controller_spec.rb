@@ -35,8 +35,7 @@ describe Api::V1::ReviewsController, type: :controller do
       expect(response.status).to eq 400
       expect(json_parsed_response.keys).to have_content("error")
       expect(json_parsed_response["error"]).to eq ({
-        "user_id" => ["can't be blank"],
-        "user" => ["must exist"]
+        "user_id" => ["can't be blank"]
       })
     end
   end
