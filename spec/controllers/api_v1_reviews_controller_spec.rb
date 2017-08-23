@@ -3,14 +3,14 @@ require 'rails_helper'
 describe Api::V1::ReviewsController, type: :controller do
   let(:json_parsed_response) { JSON.parse(response.body) }
   before(:each) do
-    @feed = FactoryGirl.create(:feed)
     @user = FactoryGirl.create(:user)
+    @feed = FactoryGirl.create(:feed, user: @user)
   end
 
   describe "POST #create" do
     before(:each) do
       @correct_review_params = {
-        message: "This feed rocks", feed_id: @feed.id
+        message: "This feed rocks", feed_id: @feed.id, user_id: @user.id
       }
     end
     let(:wrong_params) { {  feed_id: @feed.id } }
